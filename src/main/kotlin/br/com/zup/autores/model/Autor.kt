@@ -9,7 +9,7 @@ import javax.persistence.Id
 class Autor(
     val nome: String?,
     val email: String?,
-    val descricao: String?){
+    var descricao: String?){
 
     /*
     No id usamos o tipo var pois se usarmos val, tornamos nosso atributo imutável,

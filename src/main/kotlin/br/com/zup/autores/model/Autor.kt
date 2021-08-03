@@ -7,9 +7,11 @@ import javax.persistence.Id
 
 @Entity
 class Autor(
-    val nome: String?,
-    val email: String?,
-    var descricao: String?){
+    val nome: String,
+    val email: String,
+    var descricao: String,
+    val endereco: Endereco
+) {
 
     /*
     No id usamos o tipo var pois se usarmos val, tornamos nosso atributo imutável,
@@ -21,5 +23,10 @@ class Autor(
     var id: Long? = null
 
     val criadoEm: LocalDateTime = LocalDateTime.now()
+    override fun toString(): String {
+        return "Autor(nome='$nome', email='$email', descricao='$descricao', endereco=$endereco, id=$id, criadoEm=$criadoEm)"
+    }
+
+
 }
 

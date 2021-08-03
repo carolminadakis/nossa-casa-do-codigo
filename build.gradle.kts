@@ -8,6 +8,9 @@ plugins {
     id("org.jetbrains.kotlin.plugin.jpa") version "1.4.32"
 }
 
+allOpen {
+    annotation("io.micronaut.http.annotation.Controller")
+}
 
 version = "0.1"
 group = "br.com.zup"
@@ -39,6 +42,7 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
     implementation("io.micronaut:micronaut-validation")
+    implementation("io.micronaut.xml:micronaut-jackson-xml")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 

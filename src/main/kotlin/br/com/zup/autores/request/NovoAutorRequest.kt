@@ -19,7 +19,7 @@ data class NovoAutorRequest(
     @field:NotBlank val numero: String) {
 
     fun paraAutor(enderecoResponse: EnderecoResponse): Autor {
-        val endereco = Endereco(enderecoResponse, numero)
+        val endereco = Endereco(enderecoResponse, cep, numero)
         return Autor(nome, email, descricao, endereco)
     }
 }

@@ -51,6 +51,17 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
     // Procurar no maven repository o banco (ex: postgres)
     //implementation("org.postgresql:postgresql:42.2.18")
+
+    implementation("io.micronaut.xml:micronaut-jackson-xml")
+
+    // testes
+    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
+    testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.mockito:mockito-core:3.8.0")
+    testImplementation("io.micronaut.test:micronaut-test-junit5:2.3.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("com.h2database:h2")
 }
 
 application {

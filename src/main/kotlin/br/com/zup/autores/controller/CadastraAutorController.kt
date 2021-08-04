@@ -45,7 +45,7 @@ class CadastraAutorController(
         //pegar do banco de dados
         if (email.isBlank()) {
             val autores = autorRepository.findAll()
-            val resposta = autores.map { autor -> DetalhesDoAutorResponse(autor) }
+            val resposta = autores.map { autor -> DetalhesDoAutorResponse(autor) }  //retorna lista de autores
             return HttpResponse.ok(resposta)
         }
         val possivelAutor = autorRepository.buscaPorEmail(email)
